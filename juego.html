@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/reset.css">
+    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <title>Juego del Ahorcado</title>
+</head>
+
+<body>
+    <main class="contenedor-principal">
+        <section class="colum1">
+            <div class="contenedor-item1">
+                <div id="item1"></div>  
+                <img src="/image/trompetero.png" alt="trompetero" class="trompetero">             
+            </div>
+
+            <div class="contenedor-item2">
+                <div id="item2"></div>
+                <button class="b-new" onclick="nuevoJuego()">Nuevo juego</button>
+                <a href="/index.html"><button class="b-desistir">Desistir</button></a>                
+            </div>
+        </section>
+
+        <section class="colum2">
+            <div class="contenedor-item3">
+                <div id="item3"></div>
+                <div class="ahorcado">
+                    <img src="/image/horca.png" alt="horca" id="horca">
+                    <img alt="arlequin" id="arlequin-juego">
+                </div>
+            </div>
+            
+            <div class="contenedor-item4">
+                <div id="item4"></div>
+                <div class="contenedor-acertadas"></div>
+            </div>
+        </section>
+
+        <section class="colum3">
+            <div class="contenedor-item5">
+                <div id="item5"></div>
+                <img src="/image/banner-arco.png" alt="banner-arco" class="banner-arco">  
+            </div>
+
+            <div class="contenedor-item6">
+                <div id="item6"></div>
+                <p id="texto1">LETRAS</p>
+                <p id="texto2">Incorrectas</p>
+                <div class="contenedor-erradas"></div>                             
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
