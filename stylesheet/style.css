@@ -28,9 +28,7 @@ body {
     height: 260px;
     top: calc(50% - 130px);
     left: calc(50% - 180px);
-    border-radius: 24PX;
-    opacity: 0.7;
-    background: #D9D9D9;
+    border-radius: 24px;
     box-shadow: 2px 2px 20px #232A35;     
 }
 
@@ -39,7 +37,17 @@ body {
     font-family: 'Didact Gothic', sans-serif;
 }
 
+.inicial {
+    position: absolute;
+    width: 360px;
+    height: 260px;
+    background: #D9D9D9;
+    opacity: 0.7;
+    border-radius: 24px;
+}
+
 .b-agregar-palabra {
+    position: absolute;
     width: 190px;
     height: 70px;
     margin-left: calc(50% - 95px);
@@ -72,7 +80,7 @@ body {
     width: 200px;
     height: 70px;
     margin-left: calc(50% - 100px);
-    margin-top: 225px;
+    margin-top: 50px;
     border-radius: 30px;
     background: #547C7E;
     border: none;
