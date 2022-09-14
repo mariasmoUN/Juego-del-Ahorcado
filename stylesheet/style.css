@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(/image/castel3.jpg);
+    background-image: url(./castel3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
