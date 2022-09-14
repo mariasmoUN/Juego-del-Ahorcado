@@ -1,7 +1,7 @@
 /* ;(function() { */
     /* 'use strict' */
     
-var palabras = ['html', 'css', 'programa', 'juego', 'ventana', 'imagen', 'agua', 'animal', 'planta', 'afinidad'];
+var palabras = ['html', 'css', 'programa', 'juego', 'ventana', 'imagen', 'agua', 'animal', 'planta', 'afinidad', 'libro', 'cubo', 'estrella', 'mar', 'tierra', 'cielo', 'lluvia', 'sol', 'cuadro', 'camara', 'foto', 'cama', 'reloj', 'palabra', 'cabello', 'control', 'llave', 'celular', 'hoja', 'galleta', 'tijera', 'sonido', 'basura', 'calle', 'carro', 'arbol', 'flor'];
 
 //agregar palabras a la lista
 function focus() {
