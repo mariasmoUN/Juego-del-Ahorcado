@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'Old London';
-    src: url('/font/OldLondon.woff') format('woff');
+    src: url('../font/OldLondon.woff') format('woff');
 }
 
 body {
-    background-image: url('/image/castel3.png');
+    background-image: url('../image/castel3.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
