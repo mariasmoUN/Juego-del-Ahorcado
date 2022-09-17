@@ -31,7 +31,7 @@ Este es el segundo Challenge del programa ONE - Oracle Next Education, donde se 
 
 ---
 
-![Juego del Ahorcado(9)](https://user-images.githubusercontent.com/110046283/190877579-af07e59a-42b2-43b5-a475-e7348f4e21d6.png)
+![Juego del Ahorcado(10)](https://user-images.githubusercontent.com/110046283/190878024-126d4303-1a38-4357-867b-bcc3641d1211.png)
 
 ---
 
