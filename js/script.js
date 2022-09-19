@@ -17,7 +17,7 @@ function value() {
 function agregar_palabra() {
     var input = document.getElementById('input-texto').value;
     
-    if (/[^a-zñ ]/.test(input)) {
+    if (/[^a-zñ]/.test(input)) {
         Swal.fire({
             icon: 'error',
             iconColor: '#4A5E60',
@@ -28,17 +28,19 @@ function agregar_palabra() {
           })
         focus();
     }
+
     else if (input.length === 0) {
         Swal.fire({
             icon: 'error',
             iconColor: '#4A5E60',
             background: '#E3E0DE',
             title: 'Oops...',
-            showConfirmButton: false,
+            confirmButtonColor: '#4A5E60',
             text: 'El campo de texto está vacio, escriba una palabra',
           })
         focus();
     }
+
     else {
         palabras.push(input)
         /* console.log(palabras) */
@@ -47,7 +49,7 @@ function agregar_palabra() {
             iconColor: '#4A5E60',
             background: '#E3E0DE',
             title: '¡Bien!',
-            showConfirmButton: false,
+            confirmButtonColor: '#4A5E60',
             text: 'Palabra agregada con éxito',
         })
 
@@ -210,13 +212,14 @@ function palabra_aleatoria() {
 function alerta_ganado() {
     Swal.fire({
         title: '¡Felicidades, ganaste!',
-        width: 350,
+        width: 380,
         padding: '2rem',
         color: '#D9D9D9',
         background: '#4A5E60',
         imageUrl: './image/ganaste.png',
         imageHeight: 250,
-        showConfirmButton: false,
+        confirmButtonColor: '#192323',
+        allowEnterKey: true,
         backdrop: `
             rgba(115,115,115,0.6)`
     })
@@ -232,7 +235,8 @@ function alerta_perdido(palabra) {
         background: '#4A5E60',
         imageUrl: './image/perdiste.png',
         imageHeight: 250,
-        showConfirmButton: false,
+        confirmButtonColor: '#192323',
+        allowEnterKey: true,
         backdrop: `
             rgba(115,115,115,0.6)`
     })
