@@ -7,8 +7,9 @@
 
 body {
     background-image: url('../image/castel3.png');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .titulo {
