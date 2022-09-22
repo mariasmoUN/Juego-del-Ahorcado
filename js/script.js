@@ -43,7 +43,6 @@ function agregar_palabra() {
 
     else {
         palabras.push(input)
-        /* console.log(palabras) */
         Swal.fire({
             icon: 'success',
             iconColor: '#4A5E60',
@@ -201,7 +200,7 @@ window.nuevoJuego = function nuevoJuego() {
     juego.errado = []
     finalizado = false
     dibujar(juego)
-    console.log(juego)
+    /* console.log(juego) */
 }
 
 function palabra_aleatoria() {
