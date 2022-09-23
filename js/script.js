@@ -1,21 +1,21 @@
 /* ;(function() { */
     /* 'use strict' */
     
-var palabras = ['html', 'css', 'programa', 'juego', 'ventana', 'imagen', 'agua', 'animal', 'planta', 'afinidad', 'libro', 'cubo', 'estrella', 'mar', 'tierra', 'cielo', 'lluvia', 'sol', 'cuadro', 'camara', 'foto', 'cama', 'reloj', 'palabra', 'cabello', 'control', 'llave', 'celular', 'hoja', 'galleta', 'tijera', 'sonido', 'basura', 'calle', 'carro', 'arbol', 'flor'];
+let palabras = ['html', 'css', 'programa', 'juego', 'ventana', 'imagen', 'agua', 'animal', 'planta', 'afinidad', 'libro', 'cubo', 'estrella', 'mar', 'tierra', 'cielo', 'lluvia', 'sol', 'cuadro', 'camara', 'foto', 'cama', 'reloj', 'palabra', 'cabello', 'control', 'llave', 'celular', 'hoja', 'galleta', 'tijera', 'sonido', 'basura', 'calle', 'carro', 'arbol', 'flor'];
 
 //agregar palabras a la lista
 function focus() {
-    var input = document.getElementById("input-texto");
+    let input = document.getElementById("input-texto");
     input.focus();
 }
 
 function value() {
-    var input = document.getElementById("input-texto");
+    let input = document.getElementById("input-texto");
     input.value = "";
 }
 
 function agregar_palabra() {
-    var input = document.getElementById('input-texto').value;
+    let input = document.getElementById('input-texto').value;
     
     if (/[^a-zñ]/.test(input)) {
         Swal.fire({
@@ -57,11 +57,11 @@ function agregar_palabra() {
 }
 
 //almacenar la configuración actual
-var juego = null
+let juego = null
 //por si ya se envió alguna alerta
-var finalizado = false
+let finalizado = false
 
-var $html = {
+let $html = {
     personaje: document.getElementById('arlequin-juego'),
     adivinado: document.querySelector('.contenedor-acertadas'),
     errado: document.querySelector('.contenedor-erradas')
@@ -69,9 +69,9 @@ var $html = {
 
 function dibujar(juego) {
     //actualizar la imagen del personaje
-    var $elemento
+    let $elemento
     $elemento = $html.personaje
-    var estado = juego.estado
+    let estado = juego.estado
 
     if (estado === 8) {
         estado = juego.previo
@@ -80,8 +80,8 @@ function dibujar(juego) {
     $elemento.src = './image/estado-arlequin/0' + estado + '.png'
 
     //creamos las letras adivinadas
-    var palabra = juego.palabra
-    var adivinado = juego.adivinado
+    let palabra = juego.palabra
+    let adivinado = juego.adivinado
     $elemento = $html.adivinado
 
     //borramos los elementos anteriores
@@ -101,7 +101,7 @@ function dibujar(juego) {
     }
 
     //creamos las letras erradas
-    var errado = juego.errado
+    let errado = juego.errado
     $elemento = $html.errado
 
     //borramos los elementos anteriores
@@ -118,15 +118,15 @@ function dibujar(juego) {
 }
 
 function adivinar(juego, letra) {
-    var estado = juego.estado
+    let estado = juego.estado
 
     //si se ha perdido o ganado, no hay que hacer nada
     if (estado === 1 || estado === 8) {
         return
     }
 
-    var adivinado = juego.adivinado
-    var errado = juego.errado
+    let adivinado = juego.adivinado
+    let errado = juego.errado
 
     //si ya hemos errado o adivinado la letra, no hay que hacer nada
     if (adivinado.indexOf(letra) >= 0 || errado.indexOf(letra) >= 0) {
@@ -167,14 +167,14 @@ function adivinar(juego, letra) {
 }
 
 window.onkeydown = function adivinarLetra(e) {
-    var letra = e.key
+    let letra = e.key
 
     if (/[^a-zñ]/.test(letra)) {
         return
     }
 
     adivinar(juego, letra)
-    var estado = juego.estado
+    let estado = juego.estado
 
     if (estado === 8 && !finalizado) {
         setTimeout(alerta_ganado, 500)
@@ -192,7 +192,7 @@ window.onkeydown = function adivinarLetra(e) {
 }
 
 window.nuevoJuego = function nuevoJuego() {
-    var palabra = palabra_aleatoria()
+    let palabra = palabra_aleatoria()
     juego = {}
     juego.palabra = palabra
     juego.estado = 7
@@ -204,7 +204,7 @@ window.nuevoJuego = function nuevoJuego() {
 }
 
 function palabra_aleatoria() {
-    var index = ~~(Math.random() * palabras.length)
+    let index = ~~(Math.random() * palabras.length)
     return palabras[index]
 }
 
